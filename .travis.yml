@@ -2,7 +2,7 @@ language: python
 python:
   - "3.8.1"
 env:
-  - DJANGO=3.0 DJANGO_SETTINGS_MODULE="django_commssson.test_settings"
+  - DJANGO=3.0 DJANGO_SETTINGS_MODULE="django3scaffold.test_settings"
 install:
   - pip install -q Django==$DJANGO --use-mirrors
 script:

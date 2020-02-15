@@ -1,2 +1,2 @@
-recursive-include django_common/templates *
-recursive-include django_common/static *
+recursive-include django3scaffold/templates *
+recursive-include django3scaffold/static *

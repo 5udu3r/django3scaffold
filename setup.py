@@ -29,7 +29,8 @@ setup(
     description = 'Faster Development For Django 3 Projects',
     packages=find_packages(),
     long_description=long_description,
-    keywords = 'django',
+    long_description_content_type='text/markdown',
+    keywords='django',
     zip_safe=False,
     install_requires=[
         'Django>=3.0',

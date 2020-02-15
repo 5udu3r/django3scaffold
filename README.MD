@@ -1,5 +1,5 @@
 
-Django 3 Scaffold
+Django 3 Scaffold Package
 ---------
 
 <p align="center"><img src="https://raw.githubusercontent.com/tokyodevs/django3scaffold/master/django3scaffold.png" width="2000"></p>
