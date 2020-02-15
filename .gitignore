@@ -3,3 +3,4 @@
 x.MD
 /build/
 /dist/
+/django3scaffold.egg-info/
