@@ -15,7 +15,7 @@ from django3scaffold import settings
 import os
 
 here = os.path.dirname(os.path.abspath(__file__))
-f = open(os.path.join(here,  'README.MD'))
+f = open(os.path.join(here,  'README.RST'))
 long_description = f.read().strip()
 f.close()
 
@@ -34,7 +34,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'Django>=3.0',
-        'South>=0.7.2'
+        'South>=0.7.2',
+        'simplejson>=3.17.0',
     ],
     test_suite = 'django3scaffold.tests',
     include_package_data=True,

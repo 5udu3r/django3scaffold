@@ -67,6 +67,13 @@ INSTALLED_APPS = [
 	- IS_PROD
 	- DOMAIN_NAME
 	- WWW_ROOT
+	
+	```
+        DOMAIN_NAME= 'localhost'
+        WWW_ROOT = BASE_DIR
+        IS_DEV = True
+        IS_PROD = False
+    ```
 
 - Add ``django3scaffold`` to your Django settings ``TEMPLATE_CONTEXT_PROCESSORS``::
 	
@@ -158,7 +165,16 @@ Last one are Posts. Posts are related to Topics. Here we need: ``title``, ``body
 
 All data should be in place!
 
-Now you must add ``forum`` app to ``INSTALLED_APPS`` and include app in ``urls.py`` file by adding into urlpatterns::
+ Now you must add ``forum`` app to ``INSTALLED_APPS`` :
+
+    ```
+    INSTALLED_APPS = [
+        # ...
+        "django3scaffold",
+    ]
+    ```
+
+Now you must include app in ``urls.py`` file by adding into urlpatterns:
 
 ```
  from django.conf.urls import url
@@ -174,9 +190,6 @@ Now you must add ``forum`` app to ``INSTALLED_APPS`` and include app in ``urls.p
 
 
 Now syncdb new app and you are ready to go::
-add include and url and path ro url file 
-add app name to settings 
-fix from django.urls import reverse in views
 
 ```
    python manage.py migrate --run-syncdb
