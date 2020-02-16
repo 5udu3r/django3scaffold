@@ -11,7 +11,7 @@ class JsonResponse(HttpResponse):
     data is a map, errors a list
     """
     json = json_response(data=data, errors=errors, success=success)
-    super(JsonResponse, self).__init__(json, mimetype='application/json')
+    super(JsonResponse, self).__init__(json, content_type='application/json')
 
 def json_response(data={ }, errors=[ ], success=True):
   data.update({
@@ -26,4 +26,4 @@ class XMLResponse(HttpResponse):
     """
     data is the entire xml body/document
     """
-    super(XMLResponse, self).__init__(data, mimetype='text/xml')
+    super(XMLResponse, self).__init__(data, content_type='text/xml')
