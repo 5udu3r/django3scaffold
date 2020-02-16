@@ -79,14 +79,12 @@ Installation
   * DOMAIN_NAME
   * WWW_ROOT
 
-    ``
 
-    DOMAIN_NAME= 'localhost'
-    WWW_ROOT = BASE_DIR
-    IS_DEV = True
-    IS_PROD = False
+        DOMAIN_NAME= 'localhost'
+        WWW_ROOT = BASE_DIR
+        IS_DEV = True
+        IS_PROD = False
 
-    ``
 
 * 
   Add ``django3scaffold`` to your Django settings ``TEMPLATE_CONTEXT_PROCESSORS``\ :
@@ -109,7 +107,7 @@ usage
 To run scaffold type:
 
 
-   python manage.py scaffold APPNAME --model MODELNAME [fields]
+        python manage.py scaffold APPNAME --model MODELNAME [fields]
 
 
 APPNAME is app name. If app does not exists it will be created.
@@ -123,12 +121,12 @@ MODELNAME is model name. Just enter model name that you want to create (for exam
 Available fields:
 
 
-   char - CharField
-   text - TextField
-   int - IntegerFIeld
-   decimal -DecimalField
-   datetime - DateTimeField
-   foreign - ForeignKey
+        char - CharField
+        text - TextField
+        int - IntegerFIeld
+        decimal -DecimalField
+        datetime - DateTimeField
+        foreign - ForeignKey
 
 
 All fields requires name that is provided after ``:`` sign, for example:
@@ -161,9 +159,9 @@ NOTICE: To all models scaffold automatically adds two fields: update_date and cr
 Scaffold creates models, views (CRUD), forms, templates, admin, urls and basic tests (CRUD). Scaffold templates are using two blocks extending from base.html:
 
 
-   {% extends "base.html" %}
-   {% block page-title %} {% endblock %}
-   {% block conent %} {% endblock %}
+        {% extends "base.html" %}
+        {% block page-title %} {% endblock %}
+        {% block conent %} {% endblock %}
 
 
 So be sure you have your base.html set up properly.
@@ -171,33 +169,33 @@ So be sure you have your base.html set up properly.
 Scaffolding example usage
 -------------------------
 
-Let's create very simple ``forum`` app. We need ``Forum``\ , ``Topic`` and ``Post`` model.
+Let's create very simple ``forum`` app. We need ``Forum`` , ``Topic`` and ``Post`` model.
 
 
 * Forum model
 
-Forum model needs just one field ``name``\ :
+Forum model needs just one field ``name`` :
 
 
-   python manage.py scaffold forum --model Forum char:name
+        python manage.py scaffold forum --model Forum char:name
 
 
 
 * Topic model
 
-Topics are created by site users so we need: ``created_by``\ , ``title`` and ``Forum`` foreign key (\ ``update_date`` and ``create_date`` are always added to models):
+Topics are created by site users so we need: ``created_by`` , ``title`` and ``Forum`` foreign key ( ``update_date`` and ``create_date`` are always added to models):
 
 
-   python manage.py scaffold forum --model Topic foreign:created_by:User char:title foreign:forum:Forum
+        python manage.py scaffold forum --model Topic foreign:created_by:User char:title foreign:forum:Forum
 
 
 
 * Post model
 
-Last one are Posts. Posts are related to Topics. Here we need: ``title``\ , ``body``\ , ``created_by`` and foreign key to ``Topic``\ :
+Last one are Posts. Posts are related to Topics. Here we need: ``title`` , ``body`` , ``created_by`` and foreign key to ``Topic``\ :
 
 
-   python manage.py scaffold forum --model Post char:title text:body foreign:created_by:User foreign:topic:Topic
+        python manage.py scaffold forum --model Post char:title text:body foreign:created_by:User foreign:topic:Topic
 
 
 All data should be in place!

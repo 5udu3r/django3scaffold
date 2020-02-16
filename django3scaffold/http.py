@@ -3,7 +3,7 @@ from io import StringIO
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponsePermanentRedirect, HttpResponseRedirect, Http404
 import json
-
+import simplejson
 
 class JsonResponse(HttpResponse):
   def __init__(self, data={ }, errors=[ ], success=True):
