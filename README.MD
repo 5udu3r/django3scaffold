@@ -170,7 +170,7 @@ All data should be in place!
     ```
     INSTALLED_APPS = [
         # ...
-        "django3scaffold",
+        "forum",
     ]
     ```
 

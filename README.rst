@@ -205,7 +205,7 @@ Now you must add ``forum`` app to ``INSTALLED_APPS`` :
     ``
     INSTALLED_APPS = [
         # ...
-        "django3scaffold",
+        "forum",
     ]
     ``
 
